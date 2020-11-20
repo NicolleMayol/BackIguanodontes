@@ -1049,3 +1049,18 @@ https://templatemo.com/tm-516-known
   top: 0;
   width: 100%;
   }
+
+  .register-image {
+    margin-bottom:2em;
+  }
+
+.btn-primary:hover{
+  background: #29ca8e;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.btn-primary{
+  border-color: transparent;
+}
+
