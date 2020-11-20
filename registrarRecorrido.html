@@ -87,15 +87,18 @@ https://templatemo.com/tm-516-known
                             </div>
 
                             <div class="col-md-12 col-sm-12">
-                                 <input type="text" class="form-control" placeholder="Nombre del recorrido" name="nombre" required="">
-                                 <input type="date" class="form-control" placeholder="Fecha" name="fecha" required="">
-                                 <input type="time" class="form-control" placeholder="Hora" name="hora" required="">
+                                 <input type="text" class="form-control" placeholder="Nombre del recorrido" name="nombre" id="txtNombreRecorrido" required="">
+                                 <input type="date" class="form-control" placeholder="Fecha" name="fecha" id="txtFecha" required="">
+                                 <input type="time" class="form-control" placeholder="Hora" name="hora" id="txtHora" required="">
 
 
                             </div>
 
                             <div class="col-md-4 col-sm-12">
-                                 <input type="submit" class="form-control" name="inscribir" value="Inscribirse">
+                                 <input type="button" class="form-control" name="inscribir" value="Inscribirse" onclick="registrarRecorrido()">
+                                 <div id="mensaje">
+                    
+                              </div>
                             </div>
 
                        </form>
@@ -169,6 +172,8 @@ https://templatemo.com/tm-516-known
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="js/registrarRecorrido.js"></script>
 
 </body>
 </html>
