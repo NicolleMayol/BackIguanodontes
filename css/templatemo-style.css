@@ -1058,9 +1058,29 @@ https://templatemo.com/tm-516-known
   background: #29ca8e;
   color: #ffffff;
   border-color: transparent;
+  border-radius: 50px;
 }
 
 .btn-primary{
   border-color: transparent;
+  border-radius: 50px;
 }
 
+.container2 {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #29ca8e;
+    border-radius: 2px;
+    color: #ffffff;
+    display: block;
+    padding: 5px 10px;
+}
