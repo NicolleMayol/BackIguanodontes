@@ -7,12 +7,32 @@ let atraparDatos = () => {
     return { email: email, contraseña: contraseña }
 }
 
+let atraparDatosRegistro = () => {
+    let nombre = document.getElementById('txtNombreRegistro').value
+    let apellido = document.getElementById('txtApellidoRegistro').value
+    let email = document.getElementById('txtEmailRegistro').value
+    
+
+    return { email: email, nombres:nombre, apellidos:apellido}
+}
+
+let registroUsuarioParte1 = () => {
+    let usuario = atraparDatosRegistro()
+    localStorage.setItem('nombreRegistro',usuario.nombres)
+    localStorage.setItem('apellidoRegistro',usuario.apellidos)
+    localStorage.setItem('emailRegistro',usuario.email)
+    document.location.href = 'http://127.0.0.1:5500/registro.html'
+}
+
 let validarInicioSesion = () => {
     let body = atraparDatos();
     let mensaje = document.getElementById("mensaje")
     let data = ""
     axios.post("http://localhost:3000/api/v1/login", body).then(respuesta => {
         if (respuesta.data.mensaje === "inicio de sesion correcto") {
+            localStorage.setItem('documento',JSON.stringify(respuesta.data.usuario.documento))
+            localStorage.setItem('nombreLogin',respuesta.data.usuario.nombres)
+            localStorage.setItem('apellidoLogin',respuesta.data.usuario.apellidos)
             document.location.href = 'http://127.0.0.1:5500/index2.html'
         } else {
             data = `<div class="alert alert-danger" role="alert">
@@ -65,4 +85,41 @@ let listarExcursiones = () => {
     })
 }
 
+let listarLugares = () => {
+    let data = ""
+    axios.get("http://localhost:3000/api/v1/lugares").then(respuesta => {
+        console.log(respuesta.data)
+        let lista = document.getElementById("listaLugares")
+        for (let i = 0; i < respuesta.data.length; i++) {
+            let lugar = respuesta.data[i]
+            data += `<div class="col-md-4 col-sm-4">
+            <div class="item">
+                 <div class="courses-thumb">
+                      <div class="courses-top">
+                           <div class="courses-image">
+                                <img src="${lugar.imagen}" class="img-responsive" alt="">
+                           </div>
+                      </div>
+
+                      <div class="courses-detail">
+                           <h3><a href="#about">${lugar.nombre}</a></h3>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+
+                      <div class="courses-info">
+                           <div class="courses-price">
+                                <a href="#about"><span>VER MÁS</span></a>
+                           </div>
+                      </div>
+                 </div>
+            </div>
+       </div>`
+        }
+        lista.innerHTML = data;
+    }).catch(error => {
+        console.log(error)
+    })
+}
+
 listarExcursiones();
+listarLugares();

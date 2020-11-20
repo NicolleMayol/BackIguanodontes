@@ -88,29 +88,33 @@ https://templatemo.com/tm-516-known
 
                             <div class="col-md-12 col-sm-12">
                                 
-                                 <input type="text" class="form-control" placeholder="Documento" name="documento" required="">
-                                 <select name="tipodocumento" class="form-control" placeholder="Tipo de Documento" required="">
+                                 <input type="text" class="form-control" placeholder="Documento" name="documento" id="txtDocumento" required="">
+                                 <select name="tipodocumento" class="form-control" placeholder="Tipo de Documento" id="cmbTipoDocumento" required="">
                                      <option>Cédula de Ciudadanía</option>
                                      <option>Cédula de Extranjería</option>
                                      <option>Pasaporte</option>
                                      <option>Otro</option>
                                  </select>
-                                 <input type="text" class="form-control" placeholder="Nombre" name="nombre" required="">
-                                 <input type="text" class="form-control" placeholder="Apellido" name="apellido" required="">
-                                 <input type="email" class="form-control" placeholder="Correo Electrónico" name="email" required="">
-                                 <input type="date" class="form-control" placeholder="Fecha de Nacimiento" name="fechaNacimiento" required="">
-                                 <select name="genero" class="form-control" placeholder="Género" required="">
+                                 <input type="text" class="form-control" placeholder="Nombre" name="nombre" id="txtNombre" required="">
+                                 <input type="text" class="form-control" placeholder="Apellido" name="apellido" id="txtApellido" required="">
+                                 <input type="email" class="form-control" placeholder="Correo Electrónico" name="email" id="txtEmail" required="">
+                                 <input type="text" class="form-control" placeholder="telefono" name="telefono" id="txtTelefono" required="">
+                                 <input type="date" class="form-control" placeholder="Fecha de Nacimiento" name="fechaNacimiento" id="txtFechaNacimiento" required="">
+                                 <select name="genero" class="form-control" placeholder="Género" id="cmbGenero" required="">
                                     <option>Femenino</option>
                                     <option>Masculino</option>
                                     <option>Otro</option>
                                 </select>
-                                <input type="password" class="form-control" placeholder="Contraseña" name="contraseña" required="">
-                                <input type="password" class="form-control" placeholder="Confirme su contraseña" name="contraseña2" required="">
+                                <input type="password" class="form-control" placeholder="Contraseña" name="contraseña" id="txtContraseña" required="">
+                                <input type="password" class="form-control" placeholder="Confirme su contraseña" id="txtConfirmarContraseña" name="contraseña2" required="">
 
                             </div>
 
                             <div class="col-md-4 col-sm-12">
-                                 <input type="submit" class="form-control" name="inscribir" value="Registrarse">
+                                 <input type="button" class="form-control" name="inscribir" value="Registrarse" onclick="registrarUsuarioParte2()">
+                                 <div id="mensaje">
+                    
+                                 </div>
                             </div>
 
                        </form>
@@ -184,6 +188,8 @@ https://templatemo.com/tm-516-known
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="js/registro.js"></script>
 
 </body>
 </html>

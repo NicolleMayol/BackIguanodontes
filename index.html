@@ -189,15 +189,15 @@ https://templatemo.com/tm-516-known
 
                     <div class="col-md-offset-1 col-md-4 col-sm-12">
                          <div class="entry-form">
-                              <form action="registro.html" method="post">
+                              <form action="" method="post">
                                    <h2>Regístrate ahora</h2>
-                                   <input type="text" name="full name" class="form-control" placeholder="Nombre Completo" required="">
+                                   <input type="text" name="" class="form-control" placeholder="Nombre" id="txtNombreRegistro" required>
 
-                                   <input type="email" name="email" class="form-control" placeholder="Correo Electrónico" required="">
+                                   <input type="text" name="" class="form-control" placeholder="Apellido" id="txtApellidoRegistro" required=>
 
-                                   <input type="password" name="password" class="form-control" placeholder="Contraseña" required="">
+                                   <input type="email" name="email" class="form-control" placeholder="Email" id="txtEmailRegistro" required>
 
-                                   <button class="submit-btn form-control" id="form-submit">Regístrate</button>
+                                   <button class="submit-btn form-control" id="form-submit" type="button" onclick="registroUsuarioParte1()">Regístrate</button>
                               </form>
                          </div>
                     </div>
@@ -221,7 +221,7 @@ https://templatemo.com/tm-516-known
                               
 
                          </div>
-
+                    </div>
                </div>
           </div>
      </section>
@@ -236,32 +236,10 @@ https://templatemo.com/tm-516-known
                               <h2>Recorridos Populares<small>Mira los recorridos preferidos por nuestros usuarios e inscríbete a ellos</small></h2>
                          </div>
 
-                         <div class="owl-carousel owl-theme owl-courses">
-                              <div class="col-md-4 col-sm-4">
-                                   <div class="item">
-                                        <div class="courses-thumb">
-                                             <div class="courses-top">
-                                                  <div class="courses-image">
-                                                       <img src="images/courses-image1.jpg" class="img-responsive" alt="">
-                                                  </div>
-                                             </div>
-
-                                             <div class="courses-detail">
-                                                  <h3><a href="#about">El pepe</a></h3>
-                                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                             </div>
-
-                                             <div class="courses-info">
-                                                  <div class="courses-price">
-                                                       <a href="#about"><span>VER MÁS</span></a>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-                             
+                         <div class="owl-carousel owl-theme owl-courses" id="listaLugares">
+                              
                          </div>
-
+                    
                </div>
           </div>
      </section>
