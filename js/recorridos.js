@@ -4,9 +4,16 @@ let long = parseFloat(localStorage.getItem('long'))
 let map;
 
 function initMap() {
+  const myLatLng = { lat: lat, lng: long },
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: lat, lng: long },
-    zoom: 8,
+    center: myLatLng,
+    zoom: 20,
   });
+
+  new google.maps.Marker({
+    position: myLatLng,
+    map,
+  });
+
 }
 
