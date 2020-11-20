@@ -108,7 +108,7 @@ let listarLugaresInscritos = () => {
                  </ul>
                  <div class="courses-info">
                       <div class="courses-price free">
-                           <a href="registrarExcursion.html" onClick = "subirDatosExcursion(${lugar.idlugar},${lugar.fecha})"><span>PUBLICAR</span></a>
+                           <a href="registrarExcursion.html" onClick = "subirDatosExcursion(${lugar.idlugar})"><span>PUBLICAR</span></a>
                       </div>
                  </div>
             </div>
@@ -123,14 +123,15 @@ let listarLugaresInscritos = () => {
 let subirDatosExcursion = (idlugar,fecha) => {
     console.log('el pepe')
     localStorage.setItem('idLugarExcursion',JSON.stringify(idlugar))
-    localStorage.setItem('fechaExcursion',JSON.stringify(fecha))
 }
 
 
 let subirDatosLugar = (idLugar,lat,long) => {
+    console.log('pepe')
     localStorage.setItem('idLugar',JSON.stringify(idLugar))
     localStorage.setItem('lat',JSON.stringify(lat))
     localStorage.setItem('long',JSON.stringify(long))
+
 }
 
 listarLugaresInscritos()

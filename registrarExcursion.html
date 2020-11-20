@@ -87,15 +87,18 @@ https://templatemo.com/tm-516-known
                             </div>
 
                             <div class="col-md-12 col-sm-12">
-                                 <input type="text" class="form-control" placeholder="Nombre de la excursión" name="nombre" required="">
-                                 <input type="text" class="form-control" placeholder="Descripción" name="description" required="">
-                                 <input type="text" class="form-control" placeholder="URL del video" name="url" required="">
+                                 <input type="text" class="form-control" placeholder="Nombre de la excursión" name="nombre" id="txtNombreExcursion" required="">
+                                 <input type="text" class="form-control" placeholder="Descripción" name="description" id="txtDescripcion" required="">
+                                 <input type="text" class="form-control" placeholder="URL del video" name="url" id="txtUrl" required="">
 
 
                             </div>
 
                             <div class="col-md-4 col-sm-12">
-                                 <input type="submit" class="form-control" name="publicar" value="Publicar">
+                                 <input type="button" class="form-control" name="publicar" value="Publicar" onclick="registrarExcursion()">
+                                 <div id="mensaje">
+                    
+                                   </div>
                             </div>
 
                        </form>
@@ -169,6 +172,8 @@ https://templatemo.com/tm-516-known
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="js/registrarExcursion.js"></script>
 
 </body>
 </html>
